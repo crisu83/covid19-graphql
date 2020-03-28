@@ -1,4 +1,32 @@
+type Location {
+  latitude: Float!
+  longitude: Float!
+}
+
+type Cases {
+  # The number of active cases
+  active: Int
+  # The number of confirmed cases
+  confirmed: Int!
+  # The number of deaths
+  deaths: Int!
+  # The number of recovered cases
+  recovered: Int!
+}
+
+type CountryOrRegion {
+  name: String!
+  provinceOrState: String
+  location: Location
+  cases: Cases!
+  # The date of the first case within the country or region
+  firstCase: String
+  # The date when the data was last updated
+  lastUpdated: String!
+  # FIPS code (only applicable for US regions)
+  fipsCode: Int
+}
 
 type Query {
-  hello: String!
+  countriesAndRegions(date: String!): [CountryOrRegion!]!
 }

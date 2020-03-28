@@ -1,21 +1,14 @@
-import { AzureFunction, Context, HttpRequest } from "@azure/functions"
+import { ApolloServer } from 'apollo-server-azure-functions'
+import { readFileSync } from 'fs'
 
-const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
-    context.log('HTTP trigger function processed a request.');
-    const name = (req.query.name || (req.body && req.body.name));
+const typeDefs = readFileSync(`${process.cwd()}/graphql/schema.graphql`, 'utf8')
 
-    if (name) {
-        context.res = {
-            // status: 200, /* Defaults to 200 */
-            body: "Hello " + (req.query.name || req.body.name)
-        };
-    }
-    else {
-        context.res = {
-            status: 400,
-            body: "Please pass a name on the query string or in the request body"
-        };
-    }
-};
+const resolvers = {
+  Query: {
+    hello: () => 'Hello from GraphQL!',
+  },
+}
 
-export default httpTrigger;
+const server = new ApolloServer({ typeDefs, resolvers })
+
+export const graphqlHandler = server.createHandler()

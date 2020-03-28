@@ -7,11 +7,20 @@
     "watch": "tsc -w",
     "prestart": "npm run build",
     "start": "func start",
-    "test": "echo \"No tests yet...\""
+    "test": "echo \"No tests yet...\"",
+    "gen": "graphql-codegen --config graphql-codegen.yml"
   },
-  "dependencies": {},
+  "dependencies": {
+    "apollo-server-azure-functions": "^2.11.0",
+    "graphql": "^14.6.0"
+  },
   "devDependencies": {
     "@azure/functions": "^1.0.2-beta2",
+    "@graphql-codegen/cli": "^1.13.1",
+    "@graphql-codegen/introspection": "1.13.1",
+    "@graphql-codegen/typescript": "^1.13.1",
+    "@graphql-codegen/typescript-resolvers": "^1.13.1",
+    "tsc": "^1.20150623.0",
     "typescript": "^3.3.3"
   }
 }

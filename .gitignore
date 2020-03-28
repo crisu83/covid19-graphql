@@ -92,3 +92,10 @@ bin
 obj
 appsettings.json
 local.settings.json
+
+# GraphQL Code Generator output
+.generated/
+graphql.schema.json
+
+# NPM lockfile (Using yarn.lock instead)
+package-lock.json

@@ -3,5 +3,22 @@
   "azureFunctions.projectLanguage": "TypeScript",
   "azureFunctions.projectRuntime": "~3",
   "debug.internalConsoleOptions": "neverOpen",
-  "azureFunctions.preDeployTask": "npm prune"
+  "azureFunctions.preDeployTask": "npm prune",
+  "eslint.lintTask.enable": true,
+  "editor.formatOnSave": false,
+  "editor.tabSize": 2,
+  "eslint.validate": [
+    "typescript",
+  ],
+  "eslint.options": {
+    "extensinons": [".ts"]
+  },
+  "[graphql]": {
+    "editor.formatOnSave": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

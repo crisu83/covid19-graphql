@@ -2,8 +2,8 @@ import { readFileSync } from 'fs';
 import { DailyReportColumn, DailyReportLegacyColumn, DailyReportRow } from '../dataSources/csse/types';
 import readCsvAsync from './readCsvAsync';
 
-describe('readCsvAsync utility', () => {
-  it('reads legacy CSV data', async () => {
+describe('readCsvAsync', () => {
+  it('reads CSV data', async () => {
     const csv = readFileSync(`${process.cwd()}/data/csse/dailyReports/01-22-2020.csv`, 'utf8');
     const data = await readCsvAsync<DailyReportRow>(csv);
     expect(data.length).toBe(38);

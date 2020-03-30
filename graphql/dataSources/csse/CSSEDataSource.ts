@@ -1,5 +1,5 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
-import readCsvAsync from '../../utils/readCsvAsync';
+import readCsvAsync from '../../utils/readCsvFile';
 import { DailyReportRow } from './types';
 
 export default class CSSEDataSource extends RESTDataSource {

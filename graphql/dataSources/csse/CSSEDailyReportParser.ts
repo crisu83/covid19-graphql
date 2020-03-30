@@ -1,7 +1,7 @@
 import { Cases, Location } from '../../.generated/types';
 import { DailyReportColumn, DailyReportLegacyColumn, DailyReportRow } from './types';
 
-class DailyReportParser {
+class CSSEDailyReportParser {
   parseCountryOrRegion = (row: DailyReportRow): string => {
     return row[DailyReportColumn.CountryOrRegion] || row[DailyReportLegacyColumn.CountryOrRegion];
   };
@@ -35,4 +35,4 @@ class DailyReportParser {
   };
 }
 
-export default new DailyReportParser();
+export default new CSSEDailyReportParser();

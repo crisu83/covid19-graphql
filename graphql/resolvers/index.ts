@@ -1,5 +1,5 @@
-import DailyReportParser from '../dataSources/johnsHopkins/DailyReportParser';
-import { DailyReportRow } from '../dataSources/johnsHopkins/types';
+import DailyReportParser from '../dataSources/csse/DailyReportParser';
+import { DailyReportRow } from '../dataSources/csse/types';
 import countriesAndRegionsResolver from './countriesAndRegionsResolver';
 
 export default {

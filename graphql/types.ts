@@ -1,7 +1,7 @@
-import JohnsHopkinsAPI from './dataSources/johnsHopkins/JohnsHopkinsAPI';
+import CSSEDataSource from './dataSources/csse/CSSEDataSource';
 
 export interface ApolloContext {
   dataSources: {
-    johnsHopkinsAPI: JohnsHopkinsAPI;
+    CSSE: CSSEDataSource;
   };
 }

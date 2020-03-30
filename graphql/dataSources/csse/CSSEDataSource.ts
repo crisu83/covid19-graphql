@@ -2,7 +2,7 @@ import { RESTDataSource } from 'apollo-datasource-rest';
 import readCsvAsync from '../../utils/readCsvAsync';
 import { DailyReportRow } from './types';
 
-export default class JohnsHopkinsAPI extends RESTDataSource {
+export default class CSSEDataSource extends RESTDataSource {
   baseURL = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master';
 
   getDailyReport = async (date: string): Promise<DailyReportRow[]> => {

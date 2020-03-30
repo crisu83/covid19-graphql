@@ -2,6 +2,8 @@
 
 GraphQL API for querying data about Covid-19 across the world.
 
+[![Action Status](https://github.com/crisu83/covid19-graphql/workflows/CI/badge.svg)](https://github.com/crisu83/covid19-graphql/actions)
+
 ## Requirements
 
 - [Node](https://github.com/tj/n) 12 and [Yarn](https://yarnpkg.com).

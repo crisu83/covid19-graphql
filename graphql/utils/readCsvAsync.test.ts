@@ -1,5 +1,5 @@
 import { readFileSync } from 'fs';
-import { DailyReportColumn, DailyReportLegacyColumn, DailyReportRow } from '../dataSources/csse/types';
+import { DailyReportColumn, DailyReportLegacyColumn, DailyReportRow } from '../dataSources/johnsHopkins/types';
 import readCsvAsync from './readCsvAsync';
 
 describe('readCsvAsync utility', () => {

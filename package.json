@@ -7,9 +7,9 @@
     "watch": "tsc -w",
     "prestart": "npm run build",
     "start": "func start",
+    "lint": "eslint graphql/**/*.ts",
     "test": "echo \"No tests yet...\"",
-    "gen": "graphql-codegen --config graphql-codegen.yml",
-    "lint": "eslint graphql/**/*.ts"
+    "gen": "graphql-codegen --config graphql-codegen.yml"
   },
   "dependencies": {
     "@fast-csv/parse": "^4.1.2",
